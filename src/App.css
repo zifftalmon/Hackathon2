@@ -8,28 +8,23 @@
   padding: 0;
 }
 body {
-  background-color: #106821;
+  background-color: #FCF8FF;
 } 
 h2 {
   text-align: center;
   padding: 10px;
-  font-family: 'Rope';
+  font-family: 'Poppins';
   font-size: 70px;
-  font-weight: 400;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
+  font-weight: 200;
 }
 .navbar {
-  background-color: #008EAA;
-  box-shadow: 1px 5px 27px 5px rgba(0,0,0,0.43);
-  display: flex;
+  display: block;
+  height: 80px;
+  width: 30vw;
   justify-content: space-between;
   align-items: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  position: sticky;
+  position: static;
   top: 0;
-  height: 80px;
 }
 .navbar h3 {
   font-family: 'Rope';
@@ -49,16 +44,73 @@ h2 {
   font-style: italic;
   font-weight: bold;
   letter-spacing: 1.5px;
+  
+}
+.storeNav {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2em;
+  margin-right: 10em;
+}
+.storeNav ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  flex-direction: column;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: left;
+  width: 18vw;
+  height: 20vh;
+}
+.storeNav ul > li {
+  display: flex;
+  text-align: left;
+  padding: 1em 0;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.storeNav ul > li Link {
+  font-size: 10px;
 }
 .storeDiv {
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 200px));
   justify-content: center;
-  align-items: baseline;
 }
-.productDiv {
-  width: 10em;
-  border: 3px solid red;
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3em;
+  border-radius: 10px;
+
+}
+.productsDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+  text-align: center;
+  /* width: 30em; */
+  
+}
+.product {
+  border-radius: 5px;
+  width: 16em;
+  background-color: #a1afa01a;
+  cursor: pointer;
+}
+.prodImg {
+  margin-top: 10px;
+  width: 15vw;
+  height: 35vh;
+  border-radius: 5px;
 }
 
 .knotDiv {
@@ -67,8 +119,8 @@ h2 {
   grid-template-rows: repeat(2, minmax(0, 4px));
   justify-content: center;
   align-items: center;
-  column-gap: 120px;
-  row-gap: 70px;
+  column-gap: 140px;
+  row-gap: 90px;
   padding: 1em;
   margin-right: 5.5em;
   margin-top: 2em;
@@ -89,6 +141,9 @@ h2 {
   font-family: 'Poppins', sans-serif;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.5px solid black;
 }
 .knotDiv button Link {
   text-align: center;
@@ -110,11 +165,12 @@ iframe {
   height: 100%;
   margin: 2em auto;
   padding: 2em;
-  border-radius: 5px;
-  background-color: #A1AFA0;
+  border-radius: 20px;
+  background-color: #a1afa07c;
 }
 .factDiv ul {
   list-style: upper-roman;
+  text-align: left;
 }
 .factDiv iframe {
   display: inline-block;
@@ -130,7 +186,7 @@ iframe {
   width: 40%;
   height: 10%;
   padding: 1em;
-  background-color: #A1AFA0;
+  background-color: #a1afa07c;
   border-radius: 5px;
 }
 .contactDiv form {
@@ -146,8 +202,6 @@ iframe {
   margin: 10px;
   outline: none;
   font-family: 'Poppins', sans-serif;
-
-
 }
 .contactDiv input[type='text'] {
   text-indent: 10px;

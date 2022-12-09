@@ -1,40 +1,45 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import {Routes, Route, Link} from 'react-router-dom'
+import GetShoes  from './GetShoes';
+import GetHarnesses from './GetHarnesses';
+import GetRopes from './GetRopes';
+import GetHelmets from './GetHelmets';
 
-class Store extends Component {
-    constructor() {
-        super()
-        this.state ={
-          products: [],
-        }
-      }
-    
-      getProducts = async () => {
-        const call = await fetch('http://localhost:3001/products')
-        const res = await call.json()
-        this.setState({products:res})
-      }
+const Store = () => {
 
-      componentDidMount() {
-        this.getProducts()
-      }
-    
-    render() {
+    const handleShoes = () => {
+        <GetShoes/>
+    }
+
+    const Store = () => {
+        return(
+            <h2>Store</h2>
+        )
+    }
         return (
+        <>
             <div className='storeDiv'>
-                {
-                    this.state.products.map( item => {
-                        return(
-                            <div className='productDiv' key={item.item_id}>
-                                <img alt={item.name} src={item.image}/>
-                                <h3>{item.name}</h3>
-                                <h3>{item.price}</h3>
-                            </div>
-                        )
-                    })
-                }
+                <div className='storeNav'>
+                    <ul>
+                        <input className='ma2' type='text'/>
+                        <li onClick={handleShoes}><Link className='f6' to='/store/shoes'>Climbing Shoes</Link></li>
+                        <li><Link className='f6' to='/store/harnesses'>Harnesses</Link></li>
+                        <li><Link className='f6' to='/store/ropes'>Ropes</Link></li>
+                        <li><Link className='f6' to='/store/helmets'>Helmets</Link></li>
+                    </ul>
+                </div>
+                <Routes>
+                    <Route exact path='/store/*'/>
+                    <Route path='/' element={<Store/>}/>
+                    <Route path='/shoes' element={<GetShoes/>}/>
+                    <Route path='/harnesses' element={<GetHarnesses/>}/>
+                    <Route path='/ropes' element={<GetRopes/>}/>
+                    <Route path='/helmets' element={<GetHelmets/>}/>
+
+                </Routes>
             </div>
+        </>
         );
     }
-}
 
 export default Store;

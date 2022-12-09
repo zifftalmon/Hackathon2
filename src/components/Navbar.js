@@ -11,7 +11,16 @@ class Navbar extends React.Component {
     Home ()  {
         return (
             <div>
-                <h2>Store</h2>
+                <hr/>
+                <h2>Home</h2>
+            </div>
+        )
+    }
+
+    Store ()  {
+        return (
+            <div>
+                <hr/>
                 <Store/>
             </div>
         )
@@ -21,6 +30,7 @@ class Navbar extends React.Component {
     Climbing () {
         return (
             <div>
+                <hr/>
                 <h2>Climbing Knots</h2>
                 <Knots/>
             </div>
@@ -30,8 +40,9 @@ class Navbar extends React.Component {
     Useful () {
         return (
             <div>
+                <hr/>
                 <h2>Walls Near You</h2>
-                    <Walls/>
+                <Walls/>
             </div>
         )
     }
@@ -39,6 +50,7 @@ class Navbar extends React.Component {
     Facts () {
         return (
             <div>
+                <hr/>
                 <Fact/>
             </div>
         )
@@ -47,6 +59,7 @@ class Navbar extends React.Component {
     Contact () {
         return (
             <div>
+                <hr/>
                 <ContactUs/>
             </div>
         )
@@ -58,6 +71,7 @@ class Navbar extends React.Component {
             <div className='navbar'>
                 <ul>
                     <Link to='/'><h3>Climbing Store</h3></Link>
+                    <li><Link to='/store'>Store</Link></li>
                     <li><Link to='/climbing-knots/'>Climbing Knots</Link></li>
                     <li><Link to='/useful-knots'>Climbing Walls Near You</Link></li>
                     <li><Link to='/facts'>Climbing Facts</Link></li>
@@ -66,6 +80,7 @@ class Navbar extends React.Component {
             </div>
             <Routes>
                 <Route exact path='/' element={<this.Home/>}/>
+                <Route path='/store/*' element={<this.Store/>}/>
                 <Route path='/climbing-knots/*' element={<this.Climbing/>}/>
                 <Route path='/useful-knots' element={<this.Useful/>}/>
                 <Route path='/facts' element={<this.Facts/>}/>
