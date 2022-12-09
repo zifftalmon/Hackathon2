@@ -14,8 +14,41 @@ app.listen(process.env.PORT || 3001, () => {
     console.log(`run on port ${process.env.PORT}||3001`);
 })
 
-app.get('/products', (req,res) => {
-    db('products')
+app.get('/products/shoes', (req,res) => {
+    db('shoes')
+    .select('*')
+    .then(rows => {
+        res.json(rows)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/products/harnesses', (req,res) => {
+    db('harnesses')
+    .select('*')
+    .then(rows => {
+        res.json(rows)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/products/ropes', (req,res) => {
+    db('ropes')
+    .select('*')
+    .then(rows => {
+        res.json(rows)
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
+app.get('/products/helmets', (req,res) => {
+    db('helmets')
     .select('*')
     .then(rows => {
         res.json(rows)
