@@ -57,3 +57,26 @@ app.get('/products/helmets', (req,res) => {
         console.log(err);
     })
 })
+
+app.post('/cart', (req,res) => {
+    db('cart')
+    .insert(req.body)
+    .returning('*')
+    .then(rows => {
+        res.json({msg:'added'})
+    }) 
+    .catch(e => {
+        console.log(e);
+    })
+})
+
+app.get('/cart', (req,res) => {
+    db('cart')
+    .select('*')
+    .then(rows => {
+        res.json(rows)
+    })
+    .catch(e => {
+        console.log(e);
+    })
+})
