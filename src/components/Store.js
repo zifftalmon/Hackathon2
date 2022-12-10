@@ -7,10 +7,6 @@ import GetHelmets from './GetHelmets';
 
 const Store = () => {
 
-    const handleShoes = () => {
-        <GetShoes/>
-    }
-
     const Store = () => {
         return(
             <h2>Store</h2>
@@ -22,7 +18,7 @@ const Store = () => {
                 <div className='storeNav'>
                     <ul>
                         <input className='ma2' type='text'/>
-                        <li onClick={handleShoes}><Link className='f6' to='/store/shoes'>Climbing Shoes</Link></li>
+                        <li><Link className='f6' to='/store/shoes'>Climbing Shoes</Link></li>
                         <li><Link className='f6' to='/store/harnesses'>Harnesses</Link></li>
                         <li><Link className='f6' to='/store/ropes'>Ropes</Link></li>
                         <li><Link className='f6' to='/store/helmets'>Helmets</Link></li>

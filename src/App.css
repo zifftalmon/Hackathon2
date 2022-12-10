@@ -20,7 +20,7 @@ h2 {
 .navbar {
   display: block;
   height: 80px;
-  width: 30vw;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   position: static;
@@ -104,6 +104,14 @@ h2 {
   border-radius: 5px;
   width: 16em;
   background-color: #a1afa01a;
+  cursor: pointer;
+}
+.product button {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 5px;
+  margin: 5px;
   cursor: pointer;
 }
 .prodImg {
@@ -204,10 +212,11 @@ iframe {
   font-family: 'Poppins', sans-serif;
 }
 .contactDiv input[type='text'] {
-  text-indent: 10px;
+  text-indent: 5px;
 }
 
-textarea {
+.contactDiv textarea {
+  text-indent: 5px;
   font-family: 'Poppins', sans-serif;
   border-radius: 5px;
   border: none;
@@ -216,4 +225,7 @@ textarea {
   height: 30vh;
   outline: none;
 
+}
+.cartProducts {
+  
 }

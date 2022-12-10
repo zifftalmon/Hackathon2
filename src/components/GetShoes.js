@@ -18,6 +18,8 @@ componentDidMount() {
     this.getProducts() 
 }
 
+
+
 render() {
     return(
         <div className="productsContainer">
@@ -28,10 +30,11 @@ render() {
             {
                 this.state.shoes.map( item => {
                     return(
-                        <div className="grow product" key={item.item_id}>
+                        <div className="product" key={item.item_id}>
                             <img className="prodImg" alt={item.name} src={item.image}/>
                             <h3>{item.name}</h3>
                             <h3>{item.price}</h3>
+                            <button className="grow" onClick={this.handleClick}>Add To Cart</button>
                         </div>
                     )
                 })

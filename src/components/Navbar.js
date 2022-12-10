@@ -5,6 +5,8 @@ import { Walls } from './Walls'
 import Store from './Store'
 import  Knots  from './Knots'
 import React from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import MyCart from './MyCart'
 
 
 class Navbar extends React.Component {
@@ -65,6 +67,15 @@ class Navbar extends React.Component {
         )
     }
 
+    Cart () {
+        return (
+            <div>
+                <hr/>
+                <MyCart/>
+            </div>
+        )
+    }
+
     render() {
         return (
             <>
@@ -76,6 +87,7 @@ class Navbar extends React.Component {
                     <li><Link to='/useful-knots'>Climbing Walls Near You</Link></li>
                     <li><Link to='/facts'>Climbing Facts</Link></li>
                     <li><Link to='/contact'>Contact Us</Link></li>
+                    <li><Link to='/cart'><FaShoppingCart/></Link></li>
                 </ul>
             </div>
             <Routes>
@@ -84,7 +96,8 @@ class Navbar extends React.Component {
                 <Route path='/climbing-knots/*' element={<this.Climbing/>}/>
                 <Route path='/useful-knots' element={<this.Useful/>}/>
                 <Route path='/facts' element={<this.Facts/>}/>
-                <Route path='/contact' element={<this.Contact/>}/>                    
+                <Route path='/contact' element={<this.Contact/>}/>
+                <Route path='/cart' element={<this.Cart/>}/>                    
             </Routes>
             </>
         );
