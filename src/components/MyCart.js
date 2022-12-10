@@ -25,15 +25,24 @@ componentDidMount() {
             <div>
                 <h2 className='tl'>My Cart</h2>
                 <div className='cartProducts'>
-                    <ul>
+                    <table>
+                        <th className='f3'>Product</th>
+                        <th className='f3'>Price</th>
+                        <th className='f3'>Qt</th>
+                        <tr>
                         {
                             this.state.products.map(item => {
                                 return(
-                                    <li>{item.name} {item.price}</li>
-                                )
-                            })
-                        }
-                    </ul>
+                                    <>
+                                    <td className='f4'>{item.name}</td>
+                                    <td className='f4'>{item.price}</td>
+                                    <td className='f4'>2</td>                
+                                    </>
+                                        )
+                                    })
+                                }
+                        </tr>
+                    </table>
                 </div>
             </div>
         );
