@@ -1,0 +1,25 @@
+Hi Ziv! 
+
+Let me just start by saying that I LOVE your climbing gear store and information page!
+It's user-friendly, it contains valuable information and teaching material and it is aesthetically clean.
+
+- A good filing system would be to have your main project folder as the backend (server.js, config, .env), 
+and in the main folder to have a client folder containing all the frontend files.
+OR, two seperate folders called "backend"/"server" and "frontend"/"client" in your main project folder.
+Your choice.
+
+- When I first ran the program it gave me "undefined" port number because you need your .env 
+file in the same location as your server.js file is, and you didnt add "()" 
+after the dotenv.config in the server.js file.
+
+- You have a hackathon2 folder with no content because it has a hidden .git 
+folder in it, you can delete that and the folder will disappear.
+
+- I absolutely LOVED how you passed the components in instances inside the Navbar component. Great use of Routes.
+
+- I'm sure if you had more time, you'd have added the handleclick function to add items to cart, 
+and have the option displayed for other products as well.
+
+Overall, your code is clean, readable and understandable. 
+You integrated the frontend, the backend and the db beautifully. What we call a PERN stack (postgres, express, react, node)
+I loved it. Very good work Ziv.
